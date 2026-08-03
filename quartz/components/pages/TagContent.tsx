@@ -86,7 +86,7 @@ export default ((opts?: Partial<TagContentOptions>) => {
                   </h2>
                   {content && <p>{content}</p>}
                   <div class="page-listing">
-                    <p>
+                    {/* <p>
                       {i18n(cfg.locale).pages.tagContent.itemsUnderTag({ count: pages.length })}
                       {pages.length > options.numPages && (
                         <>
@@ -98,7 +98,7 @@ export default ((opts?: Partial<TagContentOptions>) => {
                           </span>
                         </>
                       )}
-                    </p>
+                    </p> */}
                     <PageList limit={options.numPages} {...listProps} sort={options?.sort} />
                   </div>
                 </div>
@@ -118,7 +118,6 @@ export default ((opts?: Partial<TagContentOptions>) => {
         <div class="popover-hint">
           <article class={classes}>{content}</article>
           <div class="page-listing">
-            <p>{i18n(cfg.locale).pages.tagContent.itemsUnderTag({ count: pages.length })}</p>
             <div>
               <PageList {...listProps} sort={options?.sort} />
             </div>

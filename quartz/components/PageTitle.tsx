@@ -3,13 +3,13 @@ import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } fro
 import { classNames } from "../util/lang"
 import { i18n } from "../i18n"
 
-const PageTitle: QuartzComponent = ({ fileData, cfg, displayClass }: QuartzComponentProps) => {
+const PageTitle: QuartzComponent = ({ cfg, displayClass }: QuartzComponentProps) => {
   const title = cfg?.pageTitle ?? i18n(cfg.locale).propertyDefaults.title
-  const baseDir = pathToRoot(fileData.slug!)
   return (
-    <h2 class={classNames(displayClass, "page-title")}>
-      <a href={baseDir}>{title}</a>
-    </h2>
+    <a href="/" class={classNames(displayClass, "page-title")} style="display:flex;align-items:center;gap:0.5rem;text-decoration:none;">
+      <img src="/static/profile.jpg" alt="profile" style="width:100px;height:100px;border-radius:5%;object-fit:cover;padding-left:50px" />
+      <span>{title}</span>
+    </a>
   )
 }
 

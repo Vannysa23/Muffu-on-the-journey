@@ -106,13 +106,13 @@ export default ((opts?: Partial<FolderContentOptions>) => {
       <div class="popover-hint">
         <article class={classes}>{content}</article>
         <div class="page-listing">
-          {options.showFolderCount && (
+          {/* {options.showFolderCount && (
             <p>
               {i18n(cfg.locale).pages.folderContent.itemsUnderFolder({
                 count: allPagesInFolder.length,
               })}
             </p>
-          )}
+          )} */}
           <div>
             <PageList {...listProps} />
           </div>

@@ -14,6 +14,6 @@ I'm still very much a beginner here. I don't know exactly which path I'm heading
 
 This site is where I dump whatever I do throughout my new journey. Consider it a public logbook of someone learning in real time, mistakes and all.
 
-If you're into the same rabbit hole, whether you're further along or just as lost as me, I'd genuinely love to learn, share, and swap notes. Currently: a newbie with a dream of "*become someone cool in tech*" 🐾
+If you're into the same rabbit hole, whether you're further along or just as lost as me, I'd genuinely love to learn, share, and swap notes. Currently: a newbie with a dream of  "*become someone cool in tech*" 🐾
 
 Read first note into my journey [my journey into IT](/Muffu%20on%20the%20journey/Into%20IT.md)

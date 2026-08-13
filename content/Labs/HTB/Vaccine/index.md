@@ -5,6 +5,7 @@ tags:
   - Linux
   - HTB
 category: Linux
+socialImage: "images/vaccine-cover.png"
 ---
 
 ### About

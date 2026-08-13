@@ -1,7 +1,9 @@
 ---
-title: About muffu
+title: Welcome to Muffu's journey
 ---
 
-<meta http-equiv="refresh" content="0; url=/About-muffu" />
+Listed all the gardens, visit whichever you're interested ..
 
-[Go to About Muffu](/About-muffu)
+[[About-muffu|About Muffu]] \
+[[Labs|Self-Practices & Labs]] \
+[[Muffu on the journey/index|Muffu on the Journey]] 

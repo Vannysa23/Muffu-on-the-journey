@@ -5,7 +5,7 @@ tags:
   - Linux
   - HTB
 category: Linux
-socialImage: "https://muffuu.github.io/Labs/HTB/Vaccine/Vaccine-cover.png"
+socialImage: "images/Vaccine-cover.png"
 ---
 
 ### About

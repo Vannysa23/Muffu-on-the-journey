@@ -4,8 +4,6 @@ longform:
 tags:
 ---
 
-## About Muffu
-
 Hey, I'm Muffu 👋
 
 Plot twist: I started out as a web developer, then at one moment I received an opportunity to change my direction to cybersecurity. I took the chance and put my foot into it. I didn't plan this switch, it just kind of happened but I also glad it happended because now I found something enthusiastic me here ..

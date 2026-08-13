@@ -6,20 +6,20 @@
   overflow-y: hidden;
   min-height: 1.4rem;
   flex: 0 0.5 auto;
-  &:has(button.toc-header.collapsed) {
-    flex: 0 1 1.4rem;
-  }
+  text-align: right;
+  // &:has(button.toc-header.collapsed) {
+  //   flex: 0 1 1.4rem;
+  // }
 }
 
 button.toc-header {
   background-color: transparent;
   border: none;
-  text-align: left;
-  cursor: pointer;
+  text-align: right;
   padding: 0;
   color: var(--dark);
-  display: flex;
-  align-items: center;
+  padding-bottom: 10px;
+  margin-top: 30px;
 
   & h3 {
     font-size: 1rem;

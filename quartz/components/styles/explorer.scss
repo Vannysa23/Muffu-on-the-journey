@@ -139,8 +139,8 @@ button.desktop-explorer {
   }
 
   .folder-outer {
-    visibility: collapse;
-    display: grid;
+    visibility: visible;
+    display: block;
     grid-template-rows: 0fr;
     transition-property: grid-template-rows, visibility;
     transition-duration: 0.3s;

@@ -1,3 +1,46 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+.explorer {
+  --indent-width: 0.9rem;
+
+  li {
+    line-height: 1.5rem;
+  }
+
+  .folder-outer > .folder,
+  a.internal {
+    font-weight: 500;
+    color: var(--dark);
+  }
+
+
+  .folder-container > ul {
+    border-left: 1px solid var(--lightgray);
+    margin-left: 0.4rem;
+    padding-left: 0.5rem;
+  }
+
+  .folder-container {
+    .folder-outer > .folder,
+    a.internal {
+      font-size: 0.85rem;
+      color: var(--darkgray);
+      font-weight: 400;
+    }
+
+
+    .folder-container {
+      .folder-outer > .folder,
+      a.internal {
+        font-size: 0.8rem;
+        color: var(--gray);
+      }
+    }
+  }
+}
+
+h3 {
+  color: #963055;
+  font-weight: 700;
+}

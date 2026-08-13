@@ -5,8 +5,10 @@ import { ContentDetails } from "../../plugins/emitters/contentIndex"
 type MaybeHTMLElement = HTMLElement | undefined
 
 interface ParsedOptions {
-  folderClickBehavior: "collapse" | "link"
-  folderDefaultState: "collapsed" | "open"
+  // folderClickBehavior: "collapse" | "link"
+  // folderDefaultState: "collapsed" | "open"
+  folderClickBehavior: "link"
+  folderDefaultState: "open"
   useSavedState: boolean
   sortFn: (a: FileTrieNode, b: FileTrieNode) => number
   filterFn: (node: FileTrieNode) => boolean
@@ -132,7 +134,7 @@ function createFolderNode(
   // if the saved state is collapsed or the default state is collapsed
   const isCollapsed =
     currentExplorerState.find((item) => item.path === folderPath)?.collapsed ??
-    opts.folderDefaultState === "collapsed"
+    opts.folderDefaultState === "open"
 
   // if this folder is a prefix of the current path we
   // want to open it anyways
@@ -160,9 +162,9 @@ async function setupExplorer(currentSlug: FullSlug) {
   for (const explorer of allExplorers) {
     const dataFns = JSON.parse(explorer.dataset.dataFns || "{}")
     const opts: ParsedOptions = {
-      folderClickBehavior: (explorer.dataset.behavior || "collapse") as "collapse" | "link",
-      folderDefaultState: (explorer.dataset.collapsed || "collapsed") as "collapsed" | "open",
-      useSavedState: explorer.dataset.savestate === "true",
+      folderClickBehavior: (explorer.dataset.behavior || "link") as "link",
+      folderDefaultState: (explorer.dataset.collapsed || "open") as "open",
+      useSavedState: explorer.dataset.savestate === "false",
       order: dataFns.order || ["filter", "map", "sort"],
       sortFn: new Function("return " + (dataFns.sortFn || "undefined"))(),
       filterFn: new Function("return " + (dataFns.filterFn || "undefined"))(),
@@ -202,7 +204,7 @@ async function setupExplorer(currentSlug: FullSlug) {
       return {
         path,
         collapsed:
-          previousState === undefined ? opts.folderDefaultState === "collapsed" : previousState,
+          previousState === undefined ? opts.folderDefaultState === "open" : previousState,
       }
     })
 
@@ -233,16 +235,16 @@ async function setupExplorer(currentSlug: FullSlug) {
     }
 
     // Set up event handlers
-    const explorerButtons = explorer.getElementsByClassName(
-      "explorer-toggle",
-    ) as HTMLCollectionOf<HTMLElement>
-    for (const button of explorerButtons) {
-      button.addEventListener("click", toggleExplorer)
-      window.addCleanup(() => button.removeEventListener("click", toggleExplorer))
-    }
+    // const explorerButtons = explorer.getElementsByClassName(
+    //   "explorer-toggle",
+    // ) as HTMLCollectionOf<HTMLElement>
+    // for (const button of explorerButtons) {
+    //   button.addEventListener("click", toggleExplorer)
+    //   window.addCleanup(() => button.removeEventListener("click", toggleExplorer))
+    // }
 
     // Set up folder click handlers
-    if (opts.folderClickBehavior === "collapse") {
+    if (opts.folderClickBehavior === "link") {
       const folderButtons = explorer.getElementsByClassName(
         "folder-button",
       ) as HTMLCollectionOf<HTMLElement>

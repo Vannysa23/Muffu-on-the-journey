@@ -1,8 +1,7 @@
 ---
 title: Home
-aliases: []
 ---
 
-<meta http-equiv="refresh" content="0; url=/maffu-on-the-journey/" />
+<meta http-equiv="refresh" content="0; url=/About-muffu/" />
 
-[Go to Maffu on the Journey](/maffu-on-the-journey/)
+[Go to About Muffu](/About-muffu.md/)

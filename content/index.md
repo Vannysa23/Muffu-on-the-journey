@@ -1,5 +1,5 @@
 ---
-title: Home
+title: About muffu
 ---
 
 <meta http-equiv="refresh" content="0; url=/About-muffu" />
